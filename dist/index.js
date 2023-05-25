@@ -1,3 +1,5 @@
+//Forma correta de realizar import do http com Ts
+//import * as http from "http";
 import app from "./app.js";
 //Setando porta para 3000, OU, se tiver uma nas variaveis do ambiente, a porta das variaveis de ambiente
 const port = process.env.PORT || 3000;
