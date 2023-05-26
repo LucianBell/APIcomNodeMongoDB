@@ -1,4 +1,9 @@
+import db from "./config/dbConnect.js";
 import express from "express";
+db.on("error", console.log.bind(console, "Erro de conexão"));
+db.once("open", () => {
+    console.log("Conexão com o banco realizada com sucesso!");
+});
 const app = express();
 app.use(express.json());
 const livros = [
